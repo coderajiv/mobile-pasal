@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router';
 import { FaSun, FaMoon } from 'react-icons/fa';
-
+import logo from '../../assets/logo.jpg'; // Adjust the path as necessary
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,7 +30,8 @@ export default function Header() {
 
   return (
     <header className="bg-gray-800 dark:bg-gray-900 text-white flex justify-between items-center p-4">
-      <h1 className="text-xl font-bold">Web app</h1>
+      <img src={logo} className='h-20 w-20  rounded-full' alt="Logo" />
+      <h1 className="text-xl font-bold">The Diyalo Traders</h1>
       <nav className="space-x-4 flex items-center">
         <NavLink
           to="/"
